@@ -16,14 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import  include, url
-# from django.contrib import admin
 from rest_framework import routers
 from rest_framework.urlpatterns import format_suffix_patterns
 from employee import views
 
 
 admin.autodiscover()
-router = routers.DefaultRouter()
 
 
 
@@ -40,12 +38,3 @@ urlpatterns += format_suffix_patterns([
 ])
 
 
-# from django.contrib import admin
-# from django.urls import path, include
-
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-#     path('api-auth/', include('rest_framework.urls')),
-#     path('', include('accounts.urls')),
-#     path('api/password_reset/', include('django_rest_passwordreset.urls', namespace='password_reset')),
-# ]
